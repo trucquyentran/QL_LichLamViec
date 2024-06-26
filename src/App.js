@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import ListUser2 from './Components/Admin/demo';
+import SiderComponent from './Components/Admin/sider';
+import FooterComponent from './Components/Admin/Footer';
+import HeaderComponent from './Components/Admin/Header';
+import { Layout } from 'antd';
+import BreadcrumbComponent from './Components/Admin/Breadcrumb';
 
-function App() {
+function App ()
+{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Layout>
+        <HeaderComponent />
+        <Layout>
+          <SiderComponent />
+          <Layout style={ {
+            padding: '0 24px 24px',
+          } }>
+            <BreadcrumbComponent />
+           <ListUser2/>
+          </Layout>
+        </Layout>
+        <FooterComponent />
+      </Layout>
+      {/* <ListUser2/> */}
     </div>
   );
 }
