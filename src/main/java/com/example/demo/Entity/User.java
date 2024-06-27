@@ -14,14 +14,16 @@ public class User {
     private String gioitinh;
     private String sdt;
     private String diachi;
+    private String email;
 
-    public User(String _id, String hoten, Date ngaysinh, String gioitinh, String sdt, String diachi) {
+    public User(String _id, String hoten, Date ngaysinh, String gioitinh, String sdt, String diachi, String email) {
         this._id = _id;
         this.hoten = hoten;
         this.ngaysinh = ngaysinh;
         this.gioitinh = gioitinh;
         this.sdt = sdt;
         this.diachi = diachi;
+        this.email = email;
     }
 
     public String get_id() {
@@ -42,6 +44,14 @@ public class User {
 
     public Date getNgaysinh() {
         return ngaysinh;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setNgaysinh(Date ngaysinh) {
@@ -81,6 +91,7 @@ public class User {
                 ", gioitinh='" + gioitinh + '\'' +
                 ", sdt='" + sdt + '\'' +
                 ", diachi='" + diachi + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
