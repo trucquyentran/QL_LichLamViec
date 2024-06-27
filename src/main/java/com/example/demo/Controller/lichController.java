@@ -37,6 +37,7 @@ public class lichController {
     @PutMapping("/sua/{id}")
     public Lich suaLich(@RequestBody Lich lich, @PathVariable String id) {
         lich.setId(id);
+
         lichservice.updateLich(lich);
         return  lich;
     }

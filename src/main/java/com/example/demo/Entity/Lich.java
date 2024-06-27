@@ -33,4 +33,6 @@ public class Lich {
 
     }
 
+    public void setId(String id) {
+    }
 }
